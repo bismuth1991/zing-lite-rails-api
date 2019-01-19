@@ -40,6 +40,14 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
+RSpec::Matchers.define :match_response_schema do |schema|
+  match do |response|
+    schema_directory = "#{Dir.pwd}/spec/support/api/schemas"
+    schema_path = "#{schema_directory}/#{schema}.json"
+    JSON::Validator.validate!(schema_path, response.body, strict: true)
+  end
+end
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
