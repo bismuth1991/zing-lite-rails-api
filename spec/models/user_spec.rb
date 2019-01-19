@@ -20,4 +20,8 @@ RSpec.describe User, type: :model do
       expect(jack.session_token).not_to be_nil
     end
   end
+
+  it { should validate_length_of(:password).is_at_least(6) }
+  it { should validate_presence_of(:username) }
+  it { should validate_presence_of(:password_digest) }
 end
