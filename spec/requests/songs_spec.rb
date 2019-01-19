@@ -1,10 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'Songs API', type: :request do
+  let!(:artists) { create_list(:artist, 5) }
+  let!(:albums) { create_list(:album, 5) }
+  let(:songs) { create_list(:song, 30) }
+
   describe 'GET /songs' do
     before { get '/api/songs' }
 
-    it 'returns status code of 200' do 
+    it 'returns status code of 200' do
       expect(response).to have_http_status(200)
     end
 

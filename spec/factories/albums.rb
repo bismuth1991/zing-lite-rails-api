@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :artist do
+  factory :album do
     name { Faker::Music.album }
     cover_image_url { Faker::Internet.url }
   end
