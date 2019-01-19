@@ -16,8 +16,8 @@ RSpec.describe User, type: :model do
 
   describe 'session token' do
     it 'assigns a session_token if one is not given' do
-      jack = User.create(username: 'chuck_norris', password: 'password')
-      expect(jack.session_token).not_to be_nil
+      chuck = User.create(username: 'chuck_norris', password: 'password')
+      expect(chuck.session_token).not_to be_nil
     end
   end
 
