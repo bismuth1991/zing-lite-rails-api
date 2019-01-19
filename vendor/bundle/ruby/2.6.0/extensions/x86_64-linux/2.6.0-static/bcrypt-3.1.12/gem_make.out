@@ -1,0 +1,19 @@
+current directory: /mnt/d/coding/zing-lite-rails-api/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.12/ext/mri
+/home/bismuth/.rbenv/versions/2.6.0/bin/ruby -I /home/bismuth/.rbenv/versions/2.6.0/lib/ruby/2.6.0 -r ./siteconf20190119-11107-1v4bqoh.rb extconf.rb
+creating Makefile
+
+current directory: /mnt/d/coding/zing-lite-rails-api/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" clean
+
+current directory: /mnt/d/coding/zing-lite-rails-api/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /mnt/d/coding/zing-lite-rails-api/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20190119-11107-1x87smp
