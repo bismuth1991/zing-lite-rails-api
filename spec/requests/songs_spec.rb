@@ -9,7 +9,7 @@ RSpec.describe 'Songs API', type: :request do
     end
 
     it 'fetches songs with corresponding artists and albums' do 
-      expect(response).to match_response_schema('all_songs')
+      expect(response.body).to match_response_schema('all_songs')
     end
 
     # it 'fetches each song in the correct format' do
