@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "url",
+    "artist_id",
+    "album_id"
+  ],
+  "properties": {
+    "id": { "type": "integer" },
+    "title": { "type": "string" },
+    "url": { "type": "string" },
+    "artist_id": { "type": "string" },
+    "album_id": { "type": "string" }
+  }
+ }

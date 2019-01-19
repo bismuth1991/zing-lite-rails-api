@@ -1,0 +1,13 @@
+ {
+  "type": "object",
+  "required": [
+    "songs",
+    "artists",
+    "albums"
+  ],
+  "properties": {
+    "songs": { "type": "object" },
+    "artists": { "type": "object" },
+    "albums": { "type": "object" }
+  }
+ }
