@@ -41,7 +41,7 @@ RSpec.describe 'Songs API', type: :request do
 
     it 'fetches each album in the correct format' do
       JSON.parse(response.body)['albums'].values.each do |album|
-        expect(albums).to match_response_schema('album')
+        expect(album).to match_response_schema('album')
       end
     end
   end

@@ -6,7 +6,7 @@
     "cover_image_url"
   ],
   "properties": {
-    "id": { "type": "integer" },
+    "id": { "type": "string" },
     "name": { "type": "string" },
     "cover_image_url": { "type": "string" }
   }
