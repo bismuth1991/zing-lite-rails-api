@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :request do
+RSpec.describe 'Users API', type: :request do
   describe 'POST #create' do
     context 'with invalid params' do
       it 'validates the presence of the username' do
