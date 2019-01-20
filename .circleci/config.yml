@@ -23,6 +23,7 @@ jobs:
 
       # Bundle install dependencies
       - run: bundle install --path vendor/bundle
+      - run: sudo apt install -y postgresql-client || true
 
       # Cache Dependencies
       - type: cache-save
