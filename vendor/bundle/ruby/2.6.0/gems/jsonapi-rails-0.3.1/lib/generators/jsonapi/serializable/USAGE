@@ -1,5 +1,0 @@
-Description:
-    Generates a serializable resource for the given model.
-
-Example:
-    `rails generate jsonapi:serializable User`
