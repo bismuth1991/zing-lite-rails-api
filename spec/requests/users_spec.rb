@@ -50,6 +50,10 @@ RSpec.describe 'Users API', type: :request do
         }
       end
 
+      it 'responses with status code of 200' do
+        expect(response).to have_http_status(200)   
+      end
+      
       it 'returns the user' do
         expect(response.body).to match_response_schema('user')
       end
