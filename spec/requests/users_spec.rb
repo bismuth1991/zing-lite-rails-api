@@ -12,7 +12,7 @@ RSpec.describe 'Users API', type: :request do
         }
         
         expect(response).to have_http_status(422)   
-        expect(response.body).to eq('Username can\'t be blank')
+        expect(response.body).to eq("[\"Username can't be blank\"]")
       end
 
       it 'validates the presence of the password' do
@@ -24,7 +24,7 @@ RSpec.describe 'Users API', type: :request do
         }
         
         expect(response).to have_http_status(422)   
-        expect(response.body).to eq('Password can\'t be blank')
+        expect(response.body).to eq("[\"Password is too short (minimum is 6 characters)\"]")
       end
 
       it 'validates that the password is at least 6 characters long' do
@@ -36,7 +36,7 @@ RSpec.describe 'Users API', type: :request do
         }
 
         expect(response).to have_http_status(422)   
-        expect(response.body).to eq('Password can\'t be blank')
+        expect(response.body).to eq("[\"Password is too short (minimum is 6 characters)\"]")
       end
     end
 
@@ -51,11 +51,11 @@ RSpec.describe 'Users API', type: :request do
       end
 
       it 'returns the user' do
-        expect(response.bosy).to match_response_schema('user')
+        expect(response.body).to match_response_schema('user')
       end
 
       it 'logs in the user' do
-        user = User.find_by_username('shamayel_daoud')
+        user = User.find_by_username('jack_bruce')
         expect(session[:session_token]).to eq(user.session_token)
       end
     end

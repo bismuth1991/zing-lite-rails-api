@@ -30,7 +30,7 @@ RSpec.describe 'Session API', type: :request do
       end
 
       it 'responses with an errors' do
-        expect(response.body).to eq('Invalid credentials')
+        expect(response.body).to eq("[\"Invalid credentials\"]")
       end
     end
 
@@ -47,7 +47,6 @@ RSpec.describe 'Session API', type: :request do
 
       it 'logs in the user' do
         user = User.find_by_username('jack_bruce')
-
         expect(session[:session_token]).to eq(user.session_token)
       end
     end
