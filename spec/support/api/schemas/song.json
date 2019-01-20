@@ -8,10 +8,10 @@
     "album_id"
   ],
   "properties": {
-    "id": { "type": "string" },
+    "id": { "type": "integer" },
     "title": { "type": "string" },
     "url": { "type": "string" },
-    "artist_id": { "type": "string" },
-    "album_id": { "type": "string" }
+    "artist_id": { "type": "integer" },
+    "album_id": { "type": "integer" }
   }
  }
