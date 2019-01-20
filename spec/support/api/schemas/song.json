@@ -8,7 +8,7 @@
     "album_id"
   ],
   "properties": {
-    "id": { "type": "integer" },
+    "id": { "type": "string" },
     "title": { "type": "string" },
     "url": { "type": "string" },
     "artist_id": { "type": "string" },
