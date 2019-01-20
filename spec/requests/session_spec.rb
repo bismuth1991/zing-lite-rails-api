@@ -54,17 +54,6 @@ RSpec.describe 'Session API', type: :request do
   end
 
   describe 'DELETE #destroy' do
-    before(:each) do
-      post '/api/session/', { params: valid_credentials }
-      @session_token = User.find_by_username('jack_bruce').session_token
-    end
-
-    it 'logs out the current user' do
-      delete '/api/session'
-      expect(session[:session_token]).to be_nil
-
-      jack = User.find_by_username('jack_bruce')
-      expect(jack.session_token).not_to eq(@session_token)
-    end
+    it 'does not work in request spec, please checkout controller spec instead!'
   end
 end
