@@ -62,6 +62,10 @@ development:
 test:
   <<: *default
   database: zing-lite-rails-api_test
+  host: localhost
+  port: 5432
+  username: zing-lite-rails-api
+  password: password
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
