@@ -1,7 +1,8 @@
 version: 2
-jobs:
-  build:
+jobs: 
+  build: 
     working_directory: ~/zing-lite-rails-api
+    docker:
       - image: circleci/ruby:2.6.0
         environment:
           PGHOST: localhost
@@ -12,7 +13,7 @@ jobs:
           POSTGRES_USER: zing-lite-rails-api
           POSTGRES_DB: zing-lite-rails-api_test
           POSTGRES_PASSWORD: "password"
-    steps:
+    steps: 
       - checkout
 
       # Restore Cached Dependencies
