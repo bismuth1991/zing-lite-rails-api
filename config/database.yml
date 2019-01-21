@@ -89,6 +89,4 @@ test:
 #
 production:
   <<: *default
-  database: zing-lite-rails-api_production
-  username: zing-lite-rails-api
-  password: <%= ENV['ZING-LITE-RAILS-API_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
