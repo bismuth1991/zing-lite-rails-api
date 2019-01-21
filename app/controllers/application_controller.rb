@@ -2,7 +2,9 @@ class ApplicationController < ActionController::API
   include ActionController::Cookies
   include ActionController::RequestForgeryProtection
 
-  protect_from_forgery with: :exception
+  if !Rails.env.test?
+    protect_from_forgery with: :exception
+  end
 
   def logged_in?
     !!current_user
