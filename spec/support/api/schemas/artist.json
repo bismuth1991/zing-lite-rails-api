@@ -3,11 +3,11 @@
   "required": [
     "id",
     "name",
-    "avatar_url"
+    "avatarUrl"
   ],
   "properties": {
     "id": { "type": "integer" },
     "name": { "type": "string" },
-    "avatar_url": { "type": "string" }
+    "avatarUrl": { "type": "string" }
   }
  }

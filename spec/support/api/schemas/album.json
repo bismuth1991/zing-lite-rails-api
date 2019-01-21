@@ -3,11 +3,11 @@
   "required": [
     "id",
     "name",
-    "cover_image_url"
+    "coverImageUrl"
   ],
   "properties": {
     "id": { "type": "integer" },
     "name": { "type": "string" },
-    "cover_image_url": { "type": "string" }
+    "coverImageUrl": { "type": "string" }
   }
  }

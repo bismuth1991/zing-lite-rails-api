@@ -4,14 +4,14 @@
     "id",
     "title",
     "url",
-    "artist_id",
-    "album_id"
+    "artistId",
+    "albumId"
   ],
   "properties": {
     "id": { "type": "integer" },
     "title": { "type": "string" },
     "url": { "type": "string" },
-    "artist_id": { "type": "integer" },
-    "album_id": { "type": "integer" }
+    "artistId": { "type": "integer" },
+    "albumId": { "type": "integer" }
   }
  }
