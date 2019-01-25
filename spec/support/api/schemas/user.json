@@ -10,4 +10,4 @@
     "username": { "type": "string" },
     "csrfToken": { "type": "string" }
   }
- }
+}
