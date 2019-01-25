@@ -2,10 +2,12 @@
   "type": "object",
   "required": [
     "id",
-    "username"
+    "username",
+    "csrfToken"
   ],
   "properties": {
     "id": { "type": "integer" },
-    "username": { "type": "string" }
+    "username": { "type": "string" },
+    "csrfToken": { "type": "string" }
   }
  }
