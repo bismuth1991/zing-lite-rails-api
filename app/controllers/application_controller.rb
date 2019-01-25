@@ -2,6 +2,8 @@ class ApplicationController < ActionController::API
   include ActionController::Cookies
   include ActionController::RequestForgeryProtection
 
+  before_action :set_csrf_cookie
+
   if !Rails.env.test?
     protect_from_forgery with: :exception
   end
@@ -22,5 +24,11 @@ class ApplicationController < ActionController::API
   def logout!
     current_user.try(:reset_session_token!)
     session[:session_token] = nil
+  end
+
+  private
+
+  def set_csrf_cookie
+    cookies["CSRF-TOKEN"] = form_authenticity_token
   end
 end
