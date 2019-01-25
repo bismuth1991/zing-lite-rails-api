@@ -4,9 +4,7 @@ class ApplicationController < ActionController::API
 
   before_action :set_csrf_cookie
 
-  if !Rails.env.test?
-    protect_from_forgery with: :exception
-  end
+  protect_from_forgery with: :exception
 
   def logged_in?
     !!current_user
