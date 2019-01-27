@@ -1,6 +1,23 @@
 class Api::PlaylistsController < ApplicationController
   def index
-    @playlists = Playlist.includes(:song_ids).where('user_id = ?', params[:user_id])
+    @playlists = Playlist.includes(songs: [:artist, :album]).where('user_id = ?', params[:user_id])
+
+    @songs = []
+    @playlists.each do |playlist|
+      @songs |= playlist.songs
+    end
+
+    artist_set = Set.new
+    album_set = Set.new
+
+    @songs.each do |song|
+      artist_set.add(song.artist)
+      album_set.add(song.album)
+    end
+
+    @artists = artist_set.to_a
+    @albums = album_set.to_a
+    
     render :index
   end
 
