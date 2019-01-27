@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :password_digest, presence: { message: "can't be blank"}
   validates :password, length: { minimum: 6, allow_nil: true }
 
-  # has_many :playlists
+  has_many :playlists
 
   attr_reader :password
 

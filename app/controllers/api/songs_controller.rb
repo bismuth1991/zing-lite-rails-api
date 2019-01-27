@@ -1,12 +1,17 @@
 class Api::SongsController < ApplicationController
   def index 
-    @songs = Song.limit(20).offset(params[:off_set]).order(:id)
+    @songs = Song.includes(:artist, :album).limit(20).offset(params[:off_set]).order(:id)
 
-    artist_ids = @songs.map { |song| song.artist_id }
-    album_ids = @songs.map { |song| song.album_id }
+    artist_set = Set.new
+    album_set = Set.new
 
-    @artists = Artist.find(artist_ids)
-    @albums = Album.find(album_ids)
+    @songs.each do |song|
+      artist_set.add(song.artist)
+      album_set.add(song.album)
+    end
+
+    @artists = artist_set.to_a
+    @albums = album_set.to_a
 
     render :index
   end
