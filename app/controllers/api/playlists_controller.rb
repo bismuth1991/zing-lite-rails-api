@@ -25,6 +25,7 @@ class Api::PlaylistsController < ApplicationController
     @playlist = Playlist.new(playlist_params)
 
     if @playlist.save
+      @song_ids = params[playlist][song_ids]
       render :show
     else
       render json: @playlist.errors.full_messages, status: 422
