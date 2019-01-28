@@ -1,4 +1,3 @@
 json.set! @playlist.id do
-  @playlist.extract! :id, :name
-  json.songIds @song_ids
+  json.extract! @playlist, :id, :name, :song_ids
 end

@@ -2,7 +2,6 @@ json.playlists do
   @playlists.each do |playlist|
     json.set! playlist.id do
       json.extract! :id, :name, :song_ids
-      # json.songIds playlist.song_ids
     end
   end
 end
