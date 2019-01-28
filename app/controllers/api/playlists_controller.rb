@@ -17,15 +17,16 @@ class Api::PlaylistsController < ApplicationController
 
     @artists = artist_set.to_a
     @albums = album_set.to_a
-    
+   
     render :index
   end
 
   def create
     @playlist = Playlist.new(playlist_params)
+    @playlist.cover_image_url = Playlist.random_cover_image
 
     if @playlist.save
-      @song_ids = params[playlist][song_ids]
+      @song_ids = params[:playlist][:song_ids]
       render :show
     else
       render json: @playlist.errors.full_messages, status: 422

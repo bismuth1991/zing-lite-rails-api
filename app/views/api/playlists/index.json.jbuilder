@@ -1,8 +1,7 @@
 json.playlists do 
   @playlists.each do |playlist|
     json.set! playlist.id do
-      json.extract! :id, :name, :song_ids
-      # json.songIds playlist.song_ids
+      json.extract! playlist, :id, :name, :song_ids, :cover_image_url
     end
   end
 end
