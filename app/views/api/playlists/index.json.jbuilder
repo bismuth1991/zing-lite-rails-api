@@ -1,3 +1,11 @@
+json.playlists do 
+  @playlists.each do |playlist|
+    json.set! playlist.id do
+      json.extract! playlist, :id, :name, :song_ids, :cover_image_url
+    end
+  end
+end
+
 json.songs do 
   @songs.each do |song|
     json.set! song.id do
@@ -21,6 +29,3 @@ json.albums do
     end
   end
 end
-
-
-
