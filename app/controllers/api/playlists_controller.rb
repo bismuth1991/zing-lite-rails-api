@@ -17,7 +17,7 @@ class Api::PlaylistsController < ApplicationController
 
     @artists = artist_set.to_a
     @albums = album_set.to_a
-    
+   
     render :index
   end
 
