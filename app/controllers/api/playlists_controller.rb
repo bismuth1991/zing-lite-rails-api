@@ -23,6 +23,7 @@ class Api::PlaylistsController < ApplicationController
 
   def create
     @playlist = Playlist.new(playlist_params)
+    @playlist.cover_image_url = Playlist.random_cover_image
 
     if @playlist.save
       @song_ids = params[:playlist][:song_ids]
