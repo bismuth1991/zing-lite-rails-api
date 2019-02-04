@@ -1,7 +1,7 @@
 # Rails JSON API
 
 A standalone Rails/PostgreSQL back-end server which:
-  + Serves JSON music data to my front-end music web application Zing Lite
+  + Serves JSON music data to my front-end music web application `Zing Lite` - [live](https://bismuth1991.github.io/zing-lite/) - [github](https://github.com/bismuth1991/zing-lite)
   + Has a full User Authentication cycle with proper secured password (via BCrypt); selective CORS management; Rails' session token stored in database, and CSRF Token served to front-end
  
 
@@ -46,7 +46,7 @@ RSpec.describe 'Songs API', type: :request do
 end
 ```
 
-## Avoid N + 1 queries while fectching complicated JSON data for for front-end
+## Avoid N + 1 queries while fectching complicated JSON data for front-end
 
 ```json
 // Required JSON data
